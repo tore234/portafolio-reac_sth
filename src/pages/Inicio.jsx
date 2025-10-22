@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
@@ -15,35 +15,25 @@ export default function Home() {
       {/* 🔹 Navbar fijo */}
       <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-sky-600 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-          <NavLink
-            to="/"
-            className="font-bold text-xl text-sky-400 tracking-wide"
-          >
+          <NavLink to="/" className="font-bold text-xl text-sky-400 tracking-wide">
             STH
           </NavLink>
 
           {/* Botón hamburguesa */}
           <button
+            aria-controls="menu"
+            aria-expanded={menuOpen ? "true" : "false"}
             className="lg:hidden p-2 rounded-md hover:bg-sky-900 transition"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {menuOpen ? (
-              <X className="w-6 h-6 text-sky-400" />
-            ) : (
-              <Menu className="w-6 h-6 text-sky-400" />
-            )}
+            {menuOpen ? <X className="w-6 h-6 text-sky-400" /> : <Menu className="w-6 h-6 text-sky-400" />}
             <span className="sr-only">Abrir menú</span>
           </button>
 
           {/* Menú desktop */}
           <nav className="hidden lg:flex gap-8 text-sm">
             {["Inicio", "Proyectos", "Sobre mí", "Contacto"].map((item) => (
-              <NavLink
-                key={item}
-                to={`/${item === "Inicio" ? "" : item.toLowerCase()}`}
-                viewTransition
-                className={navLinkClass}
-              >
+              <NavLink key={item} to={`/${item === "Inicio" ? "" : item.toLowerCase()}`} className={navLinkClass}>
                 {item}
               </NavLink>
             ))}
@@ -68,7 +58,6 @@ export default function Home() {
                 >
                   <NavLink
                     to={`/${item === "Inicio" ? "" : item.toLowerCase()}`}
-                    viewTransition
                     className={navLinkClass}
                     onClick={() => setMenuOpen(false)}
                   >
@@ -116,8 +105,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-4 text-slate-300 text-lg md:text-xl">
-            Creo interfaces rápidas, accesibles y con impacto real en los
-            negocios 🚀
+            Creo interfaces rápidas, accesibles y con impacto real en los negocios 🚀
           </p>
           <p className="mt-2 text-slate-400 text-sm md:text-base">
             Apasionado por React, UI/UX y metodologías ágiles.
@@ -125,65 +113,48 @@ export default function Home() {
 
           {/* Badges de skills */}
           <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-2">
-            {["React ⚛️", "Tailwind 🎨", "GitHub 🐙", "Scrum 📈"].map(
-              (tech, i) => (
-                <motion.span
-                  key={i}
-                  className="px-3 py-1 text-xs md:text-sm rounded-full border border-sky-500/30 bg-slate-800 text-sky-300 shadow hover:bg-sky-700/40 transition"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.2 }}
-                >
-                  {tech}
-                </motion.span>
-              )
-            )}
+            {["React ⚛️", "Tailwind 🎨", "GitHub 🐙", "Scrum 📈"].map((tech, i) => (
+              <motion.span
+                key={i}
+                className="px-3 py-1 text-xs md:text-sm rounded-full border border-sky-500/30 bg-slate-800 text-sky-300 shadow hover:bg-sky-700/40 transition"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.2 }}
+              >
+                {tech}
+              </motion.span>
+            ))}
           </div>
 
           {/* Botones */}
-<div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
-  <motion.div whileHover={{ scale: 1.05 }}>
-    <NavLink
-      to="/projects"
-      viewTransition
-      className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg 
-                 bg-gradient-to-r from-sky-600 to-cyan-500 text-white 
-                 shadow-[0_0_12px_rgba(0,200,255,0.6)] 
-                 hover:shadow-[0_0_18px_rgba(0,200,255,0.9)] transition"
-    >
-      🚀 Ver proyectos
-    </NavLink>
-  </motion.div>
+          <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <NavLink
+                to="/proyectos"
+                className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg bg-gradient-to-r from-sky-600 to-cyan-500 text-white shadow-[0_0_12px_rgba(0,200,255,0.6)] hover:shadow-[0_0_18px_rgba(0,200,255,0.9)] transition"
+              >
+                🚀 Ver proyectos
+              </NavLink>
+            </motion.div>
 
-  <motion.div whileHover={{ scale: 1.05 }}>
-    <NavLink
-      to="/contact"
-      viewTransition
-      className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg 
-                 border border-sky-600 text-sky-400 
-                 hover:bg-sky-900 transition"
-    >
-      ✉️ Contáctame
-    </NavLink>
-  </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <NavLink
+                to="/contacto"
+                className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg border border-sky-600 text-sky-400 hover:bg-sky-900 transition"
+              >
+                ✉️ Contáctame
+              </NavLink>
+            </motion.div>
 
-  <motion.div whileHover={{ scale: 1.05 }}>
-    <a
-      href="https://cv-digital-salvador-trenado.vercel.app"
-      
-      className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg 
-                 bg-gradient-to-r from-slate-700 to-slate-600 text-white 
-                 shadow-[0_0_12px_rgba(100,100,100,0.6)] 
-                 hover:shadow-[0_0_18px_rgba(150,150,150,0.9)] 
-                 hover:from-slate-600 hover:to-slate-500 
-                 border border-slate-500 transition"
-    >
-      📄 Descargar CV
-    </a> 
-    
-  </motion.div>
-</div>
-
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <a
+                href="https://cv-digital-salvador-trenado.vercel.app"
+                className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg bg-gradient-to-r from-slate-700 to-slate-600 text-white shadow-[0_0_12px_rgba(100,100,100,0.6)] hover:shadow-[0_0_18px_rgba(150,150,150,0.9)] hover:from-slate-600 hover:to-slate-500 border border-slate-500 transition"
+              >
+                📄 Descargar CV
+              </a>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Banner responsive con efecto glass */}
