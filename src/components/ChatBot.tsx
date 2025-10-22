@@ -20,7 +20,7 @@ const contactInfo = [
   },
   {
     label: "LinkedIn",
-    url: "https://www.linkedin.com/in/salvador-trenado-5995942aa/",
+    url: "https://www.linkedin.com/in/salvador-trenado-hernández-5995942aa/",
     icon: "🔗",
   },
   {
@@ -124,7 +124,7 @@ export default function ChatBot() {
   };
 
   const clearChat = () => {
-    setMessages([
+    setMessages([ 
       { from: "bot", text: "Chat limpiado 🧹. ¡Pregúntame otra cosa!" },
     ]);
   };
