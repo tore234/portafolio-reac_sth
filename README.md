@@ -1,16 +1,52 @@
-# React + Vite
+# 🐘 Portafolio de Salvador Trenado | Desarrollador Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido a mi espacio digital! 👨‍💻 Soy Salvador Trenado, un apasionado desarrollador frontend con experiencia en la creación de interfaces de usuario interactivas y eficientes. Este portafolio es una muestra de mi trabajo y habilidades en el desarrollo web moderno.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:
 
-## React Compiler
+- **React**: Librería de JavaScript para construir interfaces de usuario interactivas.
+- **Vite**: Herramienta de construcción rápida para aplicaciones modernas.
+- **Tailwind CSS**: Framework de CSS para diseño personalizado y eficiente.
+- **Vercel**: Plataforma de despliegue para aplicaciones frontend.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📂 Estructura del Proyecto
 
-## Expanding the ESLint configuration
+La estructura del proyecto es la siguiente:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+/public # Archivos estáticos como imágenes y fuentes
+/src # Código fuente de la aplicación React
+/components # Componentes reutilizables
+/assets # Recursos como iconos y estilos
+.gitignore # Archivos y directorios a excluir del control de versiones
+README.md # Este archivo
+package.json # Dependencias y scripts del proyecto
+
+
+## ⚙️ Scripts Disponibles
+
+En el directorio del proyecto, puedes ejecutar los siguientes comandos:
+
+- `npm start`: Inicia la aplicación en modo de desarrollo.
+- `npm run build`: Construye la aplicación para producción.
+- `npm run lint`: Ejecuta el linter para verificar el código.
+
+## 🌐 Enlace al Portafolio
+
+Puedes ver el portafolio en vivo en el siguiente enlace:
+
+👉 [https://portafolio-reac-sth.vercel.app](https://portafolio-reac-sth.vercel.app)
+
+## 📬 Contacto
+
+Puedes contactarme a través de las siguientes plataformas:
+
+- 📧 **Email**: [trenadohernandezsalvador@gmail.com](mailto:trenadohernandezsalvador@gmail.com)
+- 🔗 **LinkedIn**: [salvador-trenado](https://www.linkedin.com/in/salvador-trenado)
+- 🐱 **GitHub**: [tore234](https://github.com/tore234)
+- 📄 **Currículum**: [Descargar CV](#) (https://cv-digital-salvador-trenado.vercel.app)
+
+---
+
+

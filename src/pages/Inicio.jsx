@@ -169,8 +169,8 @@ export default function Home() {
 
   <motion.div whileHover={{ scale: 1.05 }}>
     <a
-      href="/CV-Salvador-Trenado.pdf"
-      download
+      href="https://cv-digital-salvador-trenado.vercel.app"
+      
       className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg 
                  bg-gradient-to-r from-slate-700 to-slate-600 text-white 
                  shadow-[0_0_12px_rgba(100,100,100,0.6)] 
@@ -179,7 +179,8 @@ export default function Home() {
                  border border-slate-500 transition"
     >
       📄 Descargar CV
-    </a>
+    </a> 
+    
   </motion.div>
 </div>
 
