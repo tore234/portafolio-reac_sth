@@ -32,7 +32,7 @@ export default function Home() {
 
           {/* Menú desktop */}
           <nav className="hidden lg:flex gap-8 text-sm">
-            {["Inicio", "Proyectos", "Sobre mí", "Contacto"].map((item) => (
+            {["Inicio","Cursos", "Proyectos", "Sobre-Mi", "Contacto" ].map((item) => (
               <NavLink key={item} to={`/${item === "Inicio" ? "" : item.toLowerCase()}`} className={navLinkClass}>
                 {item}
               </NavLink>
@@ -49,7 +49,7 @@ export default function Home() {
               exit={{ opacity: 0, y: -20 }}
               className="lg:hidden flex flex-col gap-4 px-4 pb-6 bg-black/95 backdrop-blur-md border-t border-sky-600"
             >
-              {["Inicio", "Proyectos", "Sobre mí", "Contacto"].map((item, i) => (
+              {["Inicio", "Proyectos", "sobre-mi", "Contacto"].map((item, i) => (
                 <motion.div
                   key={item}
                   initial={{ opacity: 0, x: -20 }}
@@ -143,6 +143,14 @@ export default function Home() {
                 className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg border border-sky-600 text-sky-400 hover:bg-sky-900 transition"
               >
                 ✉️ Contáctame
+              </NavLink>
+            </motion.div>
+             <motion.div whileHover={{ scale: 1.05 }}>
+              <NavLink
+                to="/cursos"
+                className="inline-flex items-center justify-center min-w-[140px] px-5 py-2.5 rounded-lg bg-gradient-to-r from-sky-600 to-cyan-500 text-white shadow-[0_0_12px_rgba(0,200,255,0.6)] hover:shadow-[0_0_18px_rgba(0,200,255,0.9)] transition"
+              >
+                🎓 Cursos
               </NavLink>
             </motion.div>
 
