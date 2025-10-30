@@ -29,7 +29,7 @@ export default function ContactInfo() {
       icon: <FileText className="w-10 h-10 text-sky-400" />,
       label: "Currículum",
       value: "Descargar CV",
-      url: "/CV-Salvador-Trenado.pdf", // 👈 Asegúrate de poner tu PDF en /public
+      url: "https://cv-digital-salvador-trenado.vercel.app", // 👈 Asegúrate de poner tu PDF en /public
     },
   ];
 
